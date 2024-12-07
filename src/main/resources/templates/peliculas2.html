@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Peliculas</title>
+    <link rel="stylesheet" th:href="@{/css/peliculas2.css}">
+</head>
+<body>
+    <div class="container">
+      <header>
+          <h1>Directorio de Peliculas.</h1>
+          <p>Aquí podras tener una lista de esas peliculas que quieres ver y nunca recuerdas.</p>
+      </header>
+
+
+      <main>
+
+
+        <div  class="crearPelicula">
+        <h2>Agregar una nueva pelicula.</h2>
+        <div class="formbold-form-wrapper">
+    <form method="POST" th:action="@{/api/registrarPelicula}">
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="titulo"
+              id="titulo"
+              placeholder="avatar"
+              class="formbold-form-input"
+              />
+              <label for="firstname" class="formbold-form-label"> Titulo </label>
+          </div>
+          <div>
+              <input
+              type="text"
+              name="director"
+              id="director"
+              placeholder="Steven Spelberg"
+              class="formbold-form-input"
+              />
+              <label for="lastname" class="formbold-form-label"> Director </label>
+          </div>
+        </div>
+
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="genero"
+              id="genero"
+              placeholder="ciencia ficcion"
+              class="formbold-form-input"
+              />
+              <label for="email" class="formbold-form-label"> Genero </label>
+          </div>
+          
+        </div>
+
+
+        <button class="formbold-btn" id="btnRegistrar">
+            Registrar
+        </button>
+    </form>
+  </div>
+  </div>
+
+  <div class="directorio">
+  <h2>Aquí podras ver las peliculas que guardaste.</h2>
+  <table id="tabla">
+        <thead>
+          <tr>
+            <th colspan="6">Películas</th>
+          </tr>
+          <tr>
+            <th>#</th>
+            <th>Título</th>
+            <th>Director</th>
+            <th>Género</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div id="formulario" style="visibility: hidden;">
+    <h1>Modificación de Películas</h1>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <form>
+                <div class="formbold-input-flex">
+                    <div>
+                        <input
+                        type="text"
+                        name="tituloEditar"
+                        id="tituloEditar"
+                        placeholder="Película"
+                        class="formbold-form-input"
+                        />
+                        <label for="tituloEditar" class="formbold-form-label"> Título </label>
+                    </div>
+                    <div>
+                        <input
+                        type="text"
+                        name="directorEditar"
+                        id="directorEditar"
+                        placeholder="Spielberg"
+                        class="formbold-form-input"
+                        />
+                        <label for="directorEditar" class="formbold-form-label"> Director </label>
+                    </div>
+                </div>
+        
+                <div class="formbold-input-flex">
+                    <div>
+                        <input
+                        type="text"
+                        name="generoEditar"
+                        id="generoEditar"
+                        placeholder="Drama"
+                        class="formbold-form-input"
+                        />
+                        <label for="generoEditar" class="formbold-form-label"> Género </label>
+                    </div>
+                </div>
+        
+                <button class="formbold-btn" id="btnModificar">
+                    Modificar Película
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+  </div>
+
+      </main>
+    </div>
+    <footer>
+        <p>© 2024 [Saracho Bruno]. Todos los derechos reservados.</p>
+        <div class="socials">
+            <a href="#">Linkedin</a>
+            <a href="https://github.com/trompeta17">GitHub</a>
+        </div>
+    </footer>
+    
+
+    <script th:src="@{/script/peliculas2.js}"></script>
+</body>
+</html>
+

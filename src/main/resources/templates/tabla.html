@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Peliculas</title>
+    <link rel="stylesheet" th:href="@{/css/tabla.css}">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <link href="https://font  s.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <table id="tabla">
+        <thead>
+          <tr>
+            <th colspan="6">Películas</th>
+          </tr>
+          <tr>
+            <th>#</th>
+            <th>Título</th>
+            <th>Director</th>
+            <th>Género</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div id="formulario">
+      <h1>Modificación de Películas</h1>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <form>
+              <div class="formbold-input-flex">
+                <div>
+                    <input
+                    type="text"
+                    name="titulo"
+                    id="titulo"
+                    placeholder="Película"
+                    class="formbold-form-input"
+                    />
+                    <label for="titulo" class="formbold-form-label"> Título </label>
+                </div>
+                <div>
+                    <input
+                    type="text"
+                    name="director"
+                    id="director"
+                    placeholder="Spielberg"
+                    class="formbold-form-input"
+                    />
+                    <label for="director" class="formbold-form-label"> Director </label>
+                </div>
+              </div>
+      
+              <div class="formbold-input-flex">
+                <div>
+                    <input
+                    type="text"
+                    name="genero"
+                    id="genero"
+                    placeholder="Drama"
+                    class="formbold-form-input"
+                    />
+                    <label for="genero" class="formbold-form-label"> Género </label>
+                </div>
+              </div>
+      
+              <button class="formbold-btn" id="btnModificar">
+                  Modificar Película
+              </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+    <script th:src="@{/script/tabla.js}"></script>
+</body>
+</html>
+
+
+
+

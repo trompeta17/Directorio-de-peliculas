@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Peliculas</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    <form method="POST" th:action="@{/api/registrarPelicula}">
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="titulo"
+              id="titulo"
+              placeholder="avatar"
+              class="formbold-form-input"
+              />
+              <label for="firstname" class="formbold-form-label"> First name </label>
+          </div>
+          <div>
+              <input
+              type="text"
+              name="director"
+              id="director"
+              placeholder="Steven Spelberg"
+              class="formbold-form-input"
+              />
+              <label for="lastname" class="formbold-form-label"> Last name </label>
+          </div>
+        </div>
+
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="genero"
+              id="genero"
+              placeholder="ciencia ficcion"
+              class="formbold-form-input"
+              />
+              <label for="email" class="formbold-form-label"> Mail </label>
+          </div>
+          
+        </div>
+
+
+        <button class="formbold-btn" id="btnRegistrar">
+            Registrar
+        </button>
+    </form>
+  </div>
+</div>
+
+
+    <script th:src="@{/script/codigo.js}"></script>
+</body>
+</html>
+
+
+
+
